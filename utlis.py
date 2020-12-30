@@ -10,33 +10,33 @@ def judgeangle(Tns):
         flag = False
         count += 1
         if Tn[0] >= 160 or Tn[0] <= -160:
-            print('solution ', count, ' theta 1 is out of range !\n')
-            print(Tn,'\n')
+            #print('solution ', count, ' theta 1 is out of range !\n')
+            #print(Tn,'\n')
             flag = True
         elif Tn[1] >= 125 or Tn[1] <= -125:
-            print('solution ', count, ' theta 2 is out of range !\n')
-            print(Tn,'\n')
+            #print('solution ', count, ' theta 2 is out of range !\n')
+            #print(Tn,'\n')
             flag = True
         elif Tn[2] >= 135 or Tn[2] <= -135:
-            print('solution ', count, ' theta 3 is out of range !')
-            print(Tn,'\n')
+            #print('solution ', count, ' theta 3 is out of range !')
+            #print(Tn,'\n')
             flag = True
         elif Tn[3] >= 140 or Tn[3] <= -140:
-            print('solution ', count, ' theta 4 is out of range !')
-            print(Tn,'\n')
+            #print('solution ', count, ' theta 4 is out of range !')
+            #print(Tn,'\n')
             flag = True
         elif Tn[4] >= 100 or Tn[4] <= -100:
-            print('solution ', count, ' theta 5 is out of range !')
-            print(Tn,'\n')
+            #print('solution ', count, ' theta 5 is out of range !')
+            #print(Tn,'\n')
             flag = True
         elif Tn[5] >= 260 or Tn[5] <= -260:
-            print('solution ', count, ' theta 6 is out of range !')
-            print(Tn,'\n')
+            #print('solution ', count, ' theta 6 is out of range !')
+            #print(Tn,'\n')
             flag = True
 
         elif flag == False:
-            print('solution ', count, 'is vaild')
-            print(Tn,'\n')
+            #print('solution ', count, 'is vaild')
+            #print(Tn,'\n')
             ret.append(Tn)
     return ret
 

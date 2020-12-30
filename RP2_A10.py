@@ -66,3 +66,21 @@ def inverse_K(Tn):
     soln = [sol1, sol2, sol3, sol4, sol5, sol6, sol7, sol8]
     return  utlis.judgeangle(soln)
     
+
+if __name__ == "__main__":
+    modeChoose = 1
+
+    #point a
+    A=np.array(
+        [[0, 1, 0, 20], [-1, 0, 0, 30], [0, 0, 1, 20], [0, 0, 0, 1]]
+        )
+    #B
+    B=np.array(
+        [[0,0,-1,-10],[-1,0,0,15],[0,1,0,30],[0,0,0,1]]
+        )
+    #C
+    C=np.array([[1,0,0,-25],[0,-1,0,10],[0,0,-1,-20],[0,0,0,1]])
+
+    Ja=inverse_K(A); Jb=inverse_K(B); Jc=inverse_K(C)
+
+    choose_angle1 = Ja[0]; choose_angle2 = Jb[2]; choose_angle3 = Jc[0]
