@@ -211,37 +211,21 @@ C=np.array([[1,0,0,-25],[0,-1,0,10],[0,0,-1,-20],[0,0,0,1]])
 #print(B)
 #print(C)
 Ja=task2(A)
+print(Ja)
+
 Jb=task2(B)
 Jc=task2(C)
-print(Ja[0])
-print(Jb[0])
-print(Jc[0])
+
 choose_angle1 = Ja[0]
 choose_angle2 = Jb[2]
 choose_angle3 = Jc[0]
-#A16, x_y_z, no_use_1 = task1(joint_theta1_x[i], joint_theta2_x[i], joint_theta3_x[i], joint_theta4_x[i],joint_theta5_x[i],joint_theta6_x[i])
 
-'''
 
-# the angle and position we choose 
-angle1, out1 = IK(nx1, ny1, nz1, ox1, oy1, oz1, ax1, ay1, az1, px1, py1, pz1)
-choose_angle1 = angle1[1]
-print("Joint move angle1 使用第二組解", choose_angle1)
-
-angle2, out2 = IK(nx2, ny2, nz2, ox2, oy2, oz2, ax2, ay2, az2, px2, py2, pz2)
-choose_angle2 = angle2[1]
-print("Joint move angle1 使用第二組解", choose_angle2)
-
-angle3, out3 = IK(nx3, ny3, nz3, ox3, oy3, oz3, ax3, ay3, az3, px3, py3, pz3)
-choose_angle3 = angle3[3]
-print("Joint move angle1 使用第四組解", choose_angle3)
-'''
 q_x_sum = []
 q_v_sum = []
 q_a_sum = []
 t_x = []
 t = 0
-# t_x.append(t)
 for k in range(501):  # t = 0~1sec ，0.002sec per point 
 
     if 0 <= t < 0.3:  # linear movement
@@ -344,7 +328,7 @@ plt.subplot(3, 2, 3)
 plt.scatter(t_x, joint_theta3_x,marker = '.')
 ##plt.xlim(0, 1)
 ##plt.ylim(15, 26.3)
-plt.ylabel("Length")
+plt.ylabel("Angle")
 plt.title("joint 3")
 
 # joint 4
@@ -495,9 +479,9 @@ for i in range(501):
                                      joint_theta5_x[i], joint_theta6_x[i])
     except:
         print(joint_theta5_x[i],joint_theta6_x[i])'''
-    #print(joint_theta1_x[i], joint_theta2_x[i], joint_theta3_x[i], joint_theta4_x[i],
-                                 #joint_theta5_x[i],
-                                # joint_theta6_x[i])
+    print('123', joint_theta1_x[i], joint_theta2_x[i], joint_theta3_x[i], joint_theta4_x[i],
+                                 joint_theta5_x[i],
+                                joint_theta6_x[i])
     A16, x_y_z, no_use_1 = task1(joint_theta1_x[i], joint_theta2_x[i], joint_theta3_x[i], joint_theta4_x[i],
                                  joint_theta5_x[i],
                                  joint_theta6_x[i])
